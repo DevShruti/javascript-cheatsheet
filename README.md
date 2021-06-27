@@ -1,2 +1,2 @@
 # javascript-cheatsheet
-Javascript Cheat Sheet
+This is my Javascript Cheat Sheet
