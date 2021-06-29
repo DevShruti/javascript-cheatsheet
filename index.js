@@ -215,4 +215,435 @@ const mixedArray = [1, 'chicken', false];
   1-2
   */
 
+  /*                 Functions Assigned to Variables 
+
+
+                     let plusFive = (number) => {
+                     return number + 5;  
+                      };
+                  
+                  
+                      // f is assigned the value of plusFive
+                   let f = plusFive;
+ 
+                   
+                      plusFive(3); // 8
+                  
+                      // Since f has a function value, it can be invoked. 
+                    f(9); // 14
+
+ */
+
+
+/*                   Callback Functions
+
+
+                 const isEven = (n) => {
+                 return n % 2 == 0;
+                  }
+ 
+                    let printMsg = (evenFunc, num) => {
+                     const isNumEven = evenFunc(num);
+                   console.log(`The number ${num} is an even number: ${isNumEven}.`)
+                       }
+ 
+            // Pass in isEven as the callback function
+                  printMsg(isEven, 4); 
+             // Prints: The number 4 is an even number: True.
+
+  */
+ 
+   /*                 Higher-Order Functions
+   
+                      Array Method .forEach() 
+
+                      const numbers = [28, 77, 45, 99, 27];
+ 
+                     numbers.forEach(number => {  
+                   console.log(number);
+                      });
+   */
   
+    //                  Array Method .map()
+                     
+                      const finalParticipants = ['Taylor', 'Donald', 'Don', 'Natasha', 'Bobby'];
+ 
+                       const announcements = finalParticipants.map(member => {
+                       return member + ' joined the contest.';
+                        })
+ 
+                       console.log(announcements);
+
+
+  //                   Array Method .filter()                    
+
+                       const randomNumbers = [4, 11, 42, 14, 39];
+                       const filteredArray = randomNumbers.filter(n => {  
+                         return n > 5;
+                       });         
+                       
+                       console.log(filteredArray)
+
+
+ //                      Array Method .reduce()
+ 
+ 
+                        const arrayOfNumbers = [1, 2, 3, 4];
+ 
+                        const sum1 = arrayOfNumbers.reduce((accumulator, currentValue) => {  
+                        return accumulator + currentValue;
+                        });
+                         
+                        console.log(sum1); // 10
+
+ //                     Dot Notation for Accessing Object Properties
+ 
+                      const apple = { 
+                       color: 'Green',
+                       price: {
+                       bulk: '$3/kg',
+                       smallQty: '$4/kg'
+                      }
+                        };
+                     console.log(apple.color); // 'Green'
+                     console.log(apple.price.bulk); // '$3/kg'
+
+  //                 Accessing non-existent JavaScript properties
+  
+                    const classElection = {
+                    date: 'January 12'
+                    };
+   
+                   console.log(classElection.place); // undefined
+
+ 
+ //                 JavaScript Objects are Mutable
+ 
+                   const student = {
+                   name: 'Sheldon',
+                   score: 100,
+                   grade: 'A',
+                     }
+   
+                  console.log(student)
+              // { name: 'Sheldon', score: 100, grade: 'A' }
+   
+                   delete student.score
+                   student.grade = 'F'
+                  console.log(student)
+                 // { name: 'Sheldon', grade: 'F' 
+                          
+          
+          
+                  // JavaScript for...in loop
+
+  
+                  let mobile = {
+                 brand: 'Samsung',
+                model: 'Galaxy Note 9'
+                };
+   
+             for (let key in mobile) {
+             console.log(`${key}: ${mobile[key]}`);
+              }
+
+  
+              // Delete operator
+
+  
+             const person = {
+             firstName: "Matilda",
+             age: 27,
+             hobby: "knitting",
+             goal: "learning JavaScript"
+              };
+   
+           delete person.hobby; // or delete person[hobby];
+   
+         console.log(person);
+ 
+         /*
+ 
+           {
+              firstName: "Matilda"
+              age: 27
+              goal: "learning JavaScript"
+           }
+  */
+    
+  
+  
+              //javascript passing objects as arguments
+
+            const origNum = 8;
+            const origObj = {color: 'blue'};
+ 
+            const changeItUp = (num, obj) => {
+            num = 7;
+            obj.color = 'red';
+             };
+ 
+           changeItUp(origNum, origObj);
+ 
+          // Will output 8 since integers are passed by value.
+          console.log(origNum);
+ 
+          // Will output 'red' since objects are passed 
+          // by reference and are therefore mutable.
+          console.log(origObj.color);
+
+
+
+          // JavaScript Object Methods
+
+
+          const engine = {
+         // method shorthand, with one argument
+          start(adverb) {
+         console.log(`The engine starts up ${adverb}...`);
+         },  
+       // anonymous arrow function expression with no arguments
+        sputter: () => {
+        console.log('The engine sputters...');
+       },
+        };
+   
+        engine.start('noisily');
+        engine.sputter();
+   
+            /* Console output:
+          The engine starts up noisily...
+         The engine sputters...
+            */
+
+
+
+  // JavaScript destructuring assignment shorthand syntax
+
+
+  const rubiksCubeFacts = {
+    possiblePermutations: '43,252,003,274,489,856,000',
+    invented: '1974',
+    largestCube: '17x17x17'
+  };
+  const {possiblePermutations, invented, largestCube} = rubiksCubeFacts;
+  console.log(possiblePermutations); // '43,252,003,274,489,856,000'
+  console.log(invented); // '1974'
+  console.log(largestCube); // '17x17x17'
+
+
+
+
+  // shorthand property name syntax for object creation
+
+
+  const activity = 'Surfing';
+const beach = { activity };
+console.log(beach); // { activity: 'Surfing' }
+
+
+
+// this Keyword
+
+const cat = {
+    name: 'Pipey',
+    age: 8,
+    whatName() {
+      return this.name  
+    }
+  };
+   
+  console.log(cat.whatName()); 
+  // Output: Pipey
+
+  
+  
+  // javascript function this
+
+  
+const restaurant = {
+    numCustomers: 45,
+    seatCapacity: 100,
+    availableSeats() {
+      // this refers to the restaurant object
+      // and it's used to access its properties
+      return this.seatCapacity - this.numCustomers;
+    }
+  }
+ 
+  
+  
+  //JavaScript Arrow Function this Scope
+
+  
+const myObj = {
+    data: 'abc',
+    loggerA: () => { console.log(this.data); },
+    loggerB() { console.log(this.data); },
+};
+ 
+myObj.loggerA();    // undefined
+myObj.loggerB();    // 'abc
+
+
+
+
+// getters and setters intercept property access
+
+const myCat = {
+    _name: 'Snickers',
+    get name(){
+      return this._name
+    },
+    set name(newName){
+      //Verify that newName is a non-empty string before setting as name property
+      if (typeof newName === 'string' && newName.length > 0){
+        this._name = newName; 
+      } else {
+        console.log("ERROR: name must be a non-empty string"); 
+      }
+    }
+  }
+
+ 
+ 
+ 
+  // javascript factory functions
+
+  // A factory function that accepts 'name', 
+// 'age', and 'breed' parameters to return 
+// a customized dog object. 
+const dogFactory = (name, age, breed) => {
+    return {
+      name: name,
+      age: age,
+      breed: breed,
+      bark() {
+        console.log('Woof!');  
+      }
+    };
+  };
+
+  
+  
+  
+  // javascript getters and setters restricted
+
+  const myCat = {
+    _name: 'Dottie',
+    get name() {
+      return this._name;  
+    },
+    set name(newName) {
+      this._name = newName;  
+    }
+  };
+   
+  // Reference invokes the getter
+  console.log(myCat.name);
+   
+  // Assignment invokes the setter
+  myCat.name = 'Yankee';
+
+
+  
+  
+  
+  // Class
+
+  class Song {
+    constructor() {
+      this.title;
+      this.author;
+    }
+    
+    play() {
+      console.log('Song playing!');
+    }
+  }
+   
+  const mySong = new Song();
+  mySong.play();
+
+
+  
+  
+  // Class Constructor
+
+  class Song {
+    constructor(title, artist) {
+      this.title = title;
+      this.artist = artist;
+    }
+  }
+   
+  const mySong = new Song('Bohemian Rhapsody', 'Queen');
+  console.log(mySong.title);
+
+  
+  
+  // Class Methods
+
+  class Song {
+    play() {
+      console.log('Playing!');
+    }
+    
+    stop() {
+      console.log('Stopping!');
+    }
+  }
+
+ 
+  
+ 
+  //extends
+
+   // Parent class
+class Media {
+    constructor(info) {
+      this.publishDate = info.publishDate;
+      this.name = info.name;
+    }
+  }
+   
+  // Child class
+  class Song extends Media {
+    constructor(songData) {
+      super(songData);
+      this.artist = songData.artist;
+    }
+  }
+   
+  const mySong = new Song({ 
+    artist: 'Queen', 
+    name: 'Bohemian Rhapsody', 
+    publishDate: 1975
+  });
+
+  
+  
+  
+  // Static Methods
+
+  class Dog {
+    constructor(name) {
+      this._name = name;  
+    }
+    
+    introduce() { 
+      console.log('This is ' + this._name + ' !');  
+    }
+    
+    // A static method
+    static bark() {
+      console.log('Woof!');  
+    }
+  }
+   
+  const myDog = new Dog('Buster');
+  myDog.introduce();
+   
+  // Calling the static method
+  Dog.bark();
+
