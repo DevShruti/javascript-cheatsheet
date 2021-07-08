@@ -647,3 +647,224 @@ class Media {
   // Calling the static method
   Dog.bark();
 
+
+
+ 
+  /*  States of a JavaScript Promise
+
+
+
+const promise = new Promise((resolve, reject) => {
+  const res = true;
+  // An asynchronous operation.
+  if (res) {
+    resolve('Resolved!');
+  }
+  else {
+    reject(Error('Error'));
+  }
+});
+ 
+promise.then((res) => console.log(res), (err) => alert(err));
+
+*/
+
+
+
+
+
+/*  The .catch() method for handling rejection
+
+
+const promise = new Promise((resolve, reject) => {  
+  setTimeout(() => {
+    reject(Error('Promise Rejected Unconditionally.'));
+  }, 1000);
+});
+ 
+promise.then((res) => {
+  console.log(value);
+});
+ 
+promise.catch((err) => {
+  alert(err);
+});
+
+*/
+
+
+
+
+/* JavaScript Promise.all()
+
+
+const promise1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve(3);
+  }, 300);
+});
+const promise2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve(2);
+  }, 200);
+});
+ 
+Promise.all([promise1, promise2]).then((res) => {
+  console.log(res[0]);
+  console.log(res[1]);
+});
+
+*/
+
+
+
+
+/* Executor function of JavaScript Promise object
+
+const executorFn = (resolve, reject) => {
+  resolve('Resolved!');
+};
+ 
+const promise = new Promise(executorFn);
+
+*/
+
+
+
+
+/* .then() method of a JavaScript Promise object
+
+const promise = new Promise((resolve, reject) => {    
+  setTimeout(() => {
+    resolve('Result');
+  }, 200);
+});
+ 
+promise.then((res) => {
+  console.log(res);
+}, (err) => {
+  alert(err);
+});
+
+*/
+
+
+
+
+/* setTimeout()
+
+
+const loginAlert = () =>{
+  alert('Login');
+};
+ 
+setTimeout(loginAlert, 6000);
+
+*/
+
+
+
+
+/* Avoiding nested Promise and .then()
+
+
+const promise = new Promise((resolve, reject) => {  
+  setTimeout(() => {
+    resolve('*');
+  }, 1000);
+});
+ 
+const twoStars = (star) => {  
+  return (star + star);
+};
+ 
+const oneDot = (star) => {  
+  return (star + '.');
+};
+ 
+const print = (val) => {
+  console.log(val);
+};
+ 
+// Chaining them all together
+promise.then(twoStars).then(oneDot).then(print);
+
+
+
+
+/* Creating a Javascript Promise object
+
+
+const executorFn = (resolve, reject) => {
+  console.log('The executor function of the promise!');
+};
+ 
+const promise = new Promise(executorFn);
+
+*/
+
+
+
+/* Chaining multiple .then() methods
+
+const promise = new Promise(resolve => setTimeout(() => resolve('dAlan'), 100));
+ 
+promise.then(res => {
+  return res === 'Alan' ? Promise.resolve('Hey Alan!') : Promise.reject('Who are you?')
+}).then((res) => {
+  console.log(res)
+}, (err) => {
+  alert(err)
+});
+
+*/
+
+
+
+
+/*  Resolving JavaScript Promises
+
+let promise1 = Promise.resolve(5);
+let promise2 = 44;
+let promise3 = new Promise(function(resolve, reject) {
+  setTimeout(resolve, 100, 'foo');
+});
+ 
+Promise.all([promise1, promise2, promise3]).then(function(values) {
+  console.log(values);
+});
+// expected output: Array [5, 44, "foo"]
+
+*/
+
+
+
+
+/* Asynchronous JavaScript function
+
+function helloWorld() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('Hello World!');
+    }, 2000);
+  });
+}
+ 
+const msg = async function() { //Async Function Expression
+  const msg = await helloWorld();
+  console.log('Message:', msg);
+}
+ 
+const msg1 = async () => { //Async Arrow Function
+  const msg = await helloWorld();
+  console.log('Message:', msg);
+}
+ 
+msg(); // Message: Hello World! <-- after 2 seconds
+msg1(); // Message: Hello World! <-- after 2 seconds
+
+*/
+
+
+
+/*  
