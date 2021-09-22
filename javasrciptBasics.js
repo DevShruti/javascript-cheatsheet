@@ -129,3 +129,18 @@ var fruit = ["Banana", "Apple", "Pear"];
 // && — Logical and
 // || — Logical or
 // ! — Logical not
+
+
+
+
+// Functions
+// JavaScript functions are blocks of code that perform a certain task. A basic function looks like this:
+
+function name(parameter1, parameter2, parameter3) {
+    // what the function does
+}
+// As you can see, it consists of the function keyword plus a name.
+//  The function’s parameters are in the brackets and you have curly
+//   brackets around what the function performs. 
+//   You can create your own, but to make your life easier
+//    – there are also a number of default functions.
