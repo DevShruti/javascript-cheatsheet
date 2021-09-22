@@ -7,3 +7,10 @@
 
 </script>
 
+//Call an External JavaScript File
+//You can also place JavaScript in its own file and name it inside your HTML. 
+//That way, you can keep different types of code separate from one another,
+// making for better-organized files. 
+// If your code is in a file called myscript.js, you would call it:
+
+<script src="myscript.js"></script>
