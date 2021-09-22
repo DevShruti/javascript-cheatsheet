@@ -54,3 +54,15 @@
 // Constant numbers — const PI = 3.14
 // Objects — var name = {firstName:"John", lastName:"Doe"}
 // There are more possibilities. Note that variables are case sensitive. That means lastname and lastName will be handled as two different variables.
+
+
+
+// Objects
+// Objects are certain kinds of variables. They are variables that can have their own values and methods. The latter are actions that you can perform on objects.
+
+var person = {
+    firstName:"John",
+    lastName:"Doe",
+    age:20,
+    nationality:"German"
+};
