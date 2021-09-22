@@ -144,3 +144,13 @@ function name(parameter1, parameter2, parameter3) {
 //   brackets around what the function performs. 
 //   You can create your own, but to make your life easier
 //    – there are also a number of default functions.
+
+
+// Outputting Data
+// A common application for functions is the output of data. For the output, you have the following options:
+
+// alert() — Output data in an alert box in the browser window
+// confirm() — Opens up a yes/no dialog and returns true/false depending on user click
+// console.log() — Writes information to the browser console, good for debugging purposes
+// document.write() — Write directly to the HTML document
+// prompt() — Creates a dialogue for user input
