@@ -27,3 +27,12 @@
 // Single-line comments — To include a comment that is limited to a single line, precede it with //
 // Multi-line comments — In case you want to write longer comments between several lines, wrap it in /* and */ to avoid it from being executed
 
+// Variables in JavaScript
+// Variables are stand-in values that you can use to perform operations. You should be familiar with them from math class.
+
+// var, const, let
+// You have three different possibilities for declaring a variable in JavaScript, each with their own specialties:
+
+// var — The most common variable. It can be reassigned but only accessed within a function. Variables defined with var move to the top when the code is executed.
+// const — Can not be reassigned and not accessible before they appear within the code.
+// let — Similar to const, the let variable can be reassigned but not re-declared.
