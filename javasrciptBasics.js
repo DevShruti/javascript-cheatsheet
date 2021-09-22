@@ -123,3 +123,9 @@ var fruit = ["Banana", "Apple", "Pear"];
 // >= — Greater than or equal to
 // <= — Less than or equal to
 // ? — Ternary operator
+
+
+// Logical Operators
+// && — Logical and
+// || — Logical or
+// ! — Logical not
