@@ -97,3 +97,17 @@ var fruit = ["Banana", "Apple", "Pear"];
 // toString() — Converts elements to strings
 // unshift() —Adds a new element to the beginning
 // valueOf() — Returns the primitive value of the specified object
+
+
+// Operators
+// If you have variables, you can use them to perform different kinds of operations. To do so, you need operators.
+
+// Basic Operators
+// + — Addition
+// - — Subtraction
+// * — Multiplication
+// / — Division
+// (...) — Grouping operator, operations within brackets are executed earlier than those outside
+// % — Modulus (remainder )
+// ++ — Increment numbers
+// -- — Decrement numbers
