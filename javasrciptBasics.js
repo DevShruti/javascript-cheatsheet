@@ -169,3 +169,5 @@ for (before loop; condition for loop; execute after loop) {
 // do while — Similar to the while loop but it executes at least once and performs a check at the end to see if the condition is met to execute again
 // break —Used to stop and exit the cycle at certain conditions
 // continue — Skip parts of the cycle if certain conditions are met
+
+
