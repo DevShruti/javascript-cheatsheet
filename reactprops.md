@@ -1,7 +1,8 @@
-APP.JS
-import React from "react"
-import Contact from "./Contact"
+#### APP.JS
 
+import React from "react"
+
+import Contact from "./Contact"
 function App() {
 return (
 
@@ -33,12 +34,12 @@ return (
 </div>
 )
 }
-
 export default App
 
 #### AND HOW TO PASS THE PROPS
 
 CONTACT.JS
+
 import React from "react"
 
 export default function Contact(props) {
